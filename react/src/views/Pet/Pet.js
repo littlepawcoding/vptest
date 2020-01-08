@@ -155,24 +155,24 @@ class Pet extends React.Component {
   render() {
     // making the pet 'grow' - changing the lifeStage images depending on time
     let lifeStagePic;
-    if (this.state.pet.age <= "00:05:00") {
+    if (this.state.pet.age <= "00:00:15") {
       lifeStagePic = <img src={born} alt="born tamagotchi"></img>;
     } else if (
-      this.state.pet.age > "00:05:00" &&
-      this.state.pet.age <= "00:10:00"
+      this.state.pet.age > "00:00:15" &&
+      this.state.pet.age <= "00:00:30"
     ) {
       lifeStagePic = <img src={baby} alt="baby tamagotchi"></img>;
     } else if (
-      this.state.pet.age > "00:10:00" &&
-      this.state.pet.age <= "00:10:30"
+      this.state.pet.age > "00:00:30" &&
+      this.state.pet.age <= "00:00:45"
     ) {
       lifeStagePic = <img src={child} alt="child tamagotchi"></img>;
     } else if (
-      this.state.pet.age > "00:10:30" &&
-      this.state.pet.age <= "00:15:00"
+      this.state.pet.age > "00:00:45" &&
+      this.state.pet.age <= "00:01:00"
     ) {
       lifeStagePic = <img src={teen} alt="teen tamagotchi"></img>;
-    } else if (this.state.pet.age > "00:15:00") {
+    } else if (this.state.pet.age > "00:01:15") {
       lifeStagePic = <img src={adult} alt="adult tamagotchi"></img>;
     }
 
@@ -181,7 +181,7 @@ class Pet extends React.Component {
     //adding comment because git is acting weird
 
     let poopPic;
-    if (this.state.pet.foodTime >= "00:00:30" && this.state.pet.clean <= 13) {
+    if (this.state.pet.foodTime >= "00:00:30" && this.state.pet.clean <= 2) {
       console.log("poop should be there");
       poopPic = <img src={poop} alt="poop"></img>;
     }
