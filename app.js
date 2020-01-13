@@ -46,16 +46,16 @@ app.use(function(err, req, res, next) {
   res.send("error");
 });
 
-// cron job - running every minute
-cron.schedule("* * * * *", function() {
-  console.log("running a task every minute");
-  sendNotification();
-});
+// // cron job - running every minute
+// cron.schedule("* * * * *", function() {
+//   console.log("running a task every minute");
+//   sendNotification();
+// });
 
-// cron job - reduce the pet bars
-cron.schedule("* * * * *", function() {
-  console.log("running a task every another minute");
-  petBars();
-});
+// // cron job - reduce the pet bars
+// cron.schedule("* * * * *", function() {
+//   console.log("running a task every another minute");
+//   petBars();
+// });
 
 module.exports = app;
